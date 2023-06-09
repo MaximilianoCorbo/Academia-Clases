@@ -11,7 +11,7 @@ body{
     padding: 10px;
     color: grey;
     
-    background-image: url(./imágenes/bg-main-desktop.png);
+    background-image: url(../imágenes/bg-main-desktop.png);
     background-repeat: repeat-y;
     background-size: 30vw;
 }
@@ -29,7 +29,7 @@ body{
 
 
 .front{ 
-    background: url(./imágenes/bg-card-front.png) /*447 x 245*/;
+    background: url(../imágenes/bg-card-front.png) /*447 x 245*/;
     color:  white;
     margin: 10px;
 }
@@ -57,7 +57,7 @@ body{
 
 
 .back{
-    background: url(./imágenes/bg-card-back.png);
+    background: url(../imágenes/bg-card-back.png);
     left: 60px;
 }
 .back .CVCcode{
