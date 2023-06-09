@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid calc y alineacion</title>
+
+    <style>
+      .grid-container {
+        width: 100vw;
+        height: 100vh;
+        background-color: #ff000050;
+      }
+      .grid-table {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 50%;
+        width: 50%;
+        background-color: #00000050;
+      }
+
+      .grid-item {
+        background-color: lightgray;
+        padding: 20px;
+        text-align: center;
+        height: 50px;
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="grid-table">
+        <div class="grid-item">Elemento 1</div>
+        <div class="grid-item">Elemento 2</div>
+        <div class="grid-item">Elemento 3</div>
+      </div>
+    </div>
+  </body>
+</html>

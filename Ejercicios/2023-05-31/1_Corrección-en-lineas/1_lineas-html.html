@@ -1,0 +1,84 @@
+
+1.
+<div>
+    ¡La cosa empieza fácil!
+</div>  (Error: falta "/" en la segunda etiqueta div)
+
+2.
+<ul>
+    <li>Primer elemento</li>
+    <li>Segundo elemento</li>
+    <li>Tercer elemento</li>
+    (Error: "/" se utiliza solo para cerrar una etiqueta no para abrir)
+</ul>
+
+3.
+<h1>Título del artículo</h1>
+<div>
+    <p>Primer párrafo del artículo (/div) </p> (Error: Mala ubicación del cierre del div)
+    <p>Segundo párrafo del artículo</p>
+</div>
+
+4.
+<span>
+    <div>Hola (/span)</div> (Error: Mala ubicación del cierre del div y span)
+    <div>Equipo</div>
+(/div)</span>
+
+5.
+<div id="bloque1">
+    <p id="primer_parrafo"> Párrafo 1 </p>
+    <p (id="bloque1") id="segundo_parrafo"> Párrafo 2 </p> (Error: El atributo id no se puede repetir.)
+</div>
+
+6.
+<p>Descarga los archivos:</p>
+(Botón)<button>Click aquí</button> (Error: La etiqueta "botón" no existe)
+
+7. 
+(header) (Error: el "header" o "cabecera" es una etiqueta que forma parte del body. La etiqueta head es la similar que va fuera del body)
+<body>
+    <header>
+        <img src="ubicacion/de/la/imagen.jpg" alt="texto alternativo">
+    </header>
+    <p>Cuerpo del documento</p>
+</body>
+
+8.
+<h1>Título del artículo</h1>
+<main>
+    <p>contenido del <b>artículo(/p)</b></p> (Error: las etiquetas se cierran como los paréntesis, desde dentro hacia afuera. Ej: "{ [ () ] }"  )
+    <img src="img1.jpg" alt="texto alternativo">
+</main>
+<footer>
+    <div> Links redes sociales:
+        <ul>
+            <li>Instagram   (li)</li>
+            <li>Twitter     (li)</li>
+        (ul)</ul>
+    (div)</div>
+(footer)</footer> (Error: Falta cerrar las etiquetas con "/")
+
+9.
+<div><div><div><div></div></div></div></div> 
+ =>
+<div>
+    <div>
+        <div>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+(Error: ... No estoy seguro si es un error pero se ve mejor así. Más legible.)
+
+10.
+<footer>(Error: No cierra la etiqueta con ">")  
+    <div> Links redes sociales: (Error: Falta abrir etiqueta)
+        <ul>
+            <li>Instagram</li>
+            <li>Twitter</li> 
+        </ul> (Error: Falta cerrar etiqueta y signo)
+
+(footer)</footer> (Error: falta cerrar etiqueta "/")
+

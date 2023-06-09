@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    border: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    width: 90vw;
+    height: 90vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: 
+        "A1 A1 A1"
+        "A2 A3 A4"
+        "A5 A5 A5"
+    ;
+    gap: 0;
+}
+.Art{
+    color: whitesmoke;
+    padding-top: 5%;
+}
+.Articulo1{
+    background-color: darkblue;
+    grid-area: A1;
+}
+.Articulo2{
+    background-color: orangered;
+    grid-area: A2;
+}
+.Articulo3{
+    background-color: greenyellow;
+    grid-area: A3;
+}
+.Articulo4{
+    background-color: darkorange;
+    grid-area: A4;
+}
+.Articulo5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    grid-area: A5;
+    
+}
+.Articulo5 footer{
+    margin: 10px;
+    background-color: coral;
+    padding: 40px;
+    width: 20vw;
+    height: 20vh;
+}

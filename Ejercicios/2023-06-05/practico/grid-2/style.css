@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    border: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.grid{
+    display: grid;
+    width: 90vw;
+    height: 90vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4fr repeat(4, 1fr);
+    grid-template-areas: 
+
+        "A1 A1 A1 A1"
+        "A2 A3 A4 A5"
+        "A2 A6 A4 A5"
+        "A2 A6 A7 A5"
+        "A2 A6 A8 A9"
+    ;
+    gap: 10px;
+}
+.Art{
+    color: white;
+    background-color:yellowgreen;
+}
+.Articulo1{
+    grid-area: A1;
+}
+.Articulo2{
+    grid-area: A2;
+}
+.Articulo3{
+    grid-area: A3;
+}
+.Articulo4{
+    grid-area: A4;
+}
+.Articulo5{
+    grid-area: A5;
+}
+.Articulo6{
+    grid-area: A6;
+}
+.Articulo7{
+    grid-area: A7;
+}
+.Articulo8{
+    grid-area: A8;
+}
+.Articulo9{
+    grid-area: A9;
+}

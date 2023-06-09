@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+}
+
+.grid{
+    display: grid;
+    width: 90vw;
+    height: 90vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 6fr 2fr 1fr;
+    grid-template-areas: 
+        "Header Header"
+        "Aside Main"
+        "Aside Extra"
+        "Footer Footer"
+    ;
+    gap: 10px;
+}
+
+header{
+    grid-area: Header;
+    background-color: aqua;
+}
+aside{
+    grid-area: Aside;
+    background-color: green;
+}
+main{
+    grid-area: Main;
+    background-color: yellowgreen;
+}
+
+article{
+    grid-area: Extra;
+    background-color: gray;
+}
+footer{
+    grid-area: Footer;
+    background-color: orange;
+}

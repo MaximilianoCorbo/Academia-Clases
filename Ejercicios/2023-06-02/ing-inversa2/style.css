@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column; 
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+}
+header ul{
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid-container{
+    display: grid;
+    width: 60vw;
+    height: 90vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "main main main lado"
+    "main main main lado2"
+    "footer footer footer footer";
+    background-color: white;
+}
+.grid-item{
+    background-color: gray;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+}
+.lado{
+    grid-area: lado;
+}
+.lado2{
+    grid-area: lado2;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+
+article{
+    background-color: aqua;
+    width: 20%;
+    height: 10vh;
+    margin: 10px;
+}
+.Newseller{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}

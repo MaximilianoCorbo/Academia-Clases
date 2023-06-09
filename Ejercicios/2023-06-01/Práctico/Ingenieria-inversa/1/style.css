@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    color: violet;
+}
+
+body{
+  
+    display: flex;
+flex-direction: row;
+}
+
+aside{
+    box-sizing: border-box;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 800px;
+    background-color: aqua;
+}
+
+.TopStory{
+    display: flex;
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+.OtherTop{
+    display: flex;
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+
+.News{
+    display: flex;
+    background-color: green;
+    width: 200px;
+    height: 200px;
+}
+
+.MainContainer{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blueviolet;
+    height: 800px;
+    width: 80%;
+}
+.headline{
+    display: flex;
+    background-color: beige;
+    margin: 20px;
+    height: 50%;
+    width: 80%;
+}
+
+p{
+    width: 80%;
+    background-color: aqua;
+    margin: 20px;
+}
+
+.ejemplo{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.featured{
+    display: flex;
+    
+    background-color: brown;
+    height: 100px;
+    width: 70%;
+}
+
+.ad{
+    background-color: yellow;
+    height: 100px;
+    width: 20%;
+}
