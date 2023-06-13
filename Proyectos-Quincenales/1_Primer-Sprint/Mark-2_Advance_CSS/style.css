@@ -2,6 +2,8 @@
     padding: 0;
     border: 0;
     margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+
 }
 
 body{
@@ -15,6 +17,7 @@ body{
     background-repeat: repeat-y;
     background-size: 30vw;
 }
+
 .tarjetas{
     position: relative;
     top: 20vh;
@@ -27,7 +30,6 @@ body{
     /* border: 3px solid salmon;*/
 } 
 
-
 .front{ 
     background: url(../imágenes/bg-card-front.png) /*447 x 245*/;
     color:  white;
@@ -37,7 +39,7 @@ body{
     position: absolute;
     color: white;
     top: 55%;
-    left: 20%;
+    left: 10%;
 }
 .front img{
     position: absolute;
@@ -82,9 +84,11 @@ form{
     flex-direction: column;
     position: relative;
     top: 25vh;
+    height: 40vh;
     padding: 20px;
     margin: 10px 10px 10px 10px;
-    border: 3px solid black;
+    letter-spacing: 2px;
+    /* border: 3px solid black; */
 }
 .cvc{
     position: relative;
@@ -101,6 +105,7 @@ input{
     border-radius: 5px;
     border: 1px solid rgb(34, 8, 59);
     height: 30px;
+    
 }
 .Shortbox{
     width: 70px;
@@ -124,7 +129,7 @@ input{
 
 
 @media (max-width: 1200px){
-    .prueba{
+    .tarjetas{
         width: 350px;
         height: 350px;
         top: 15vh;
@@ -164,7 +169,7 @@ input{
         flex-direction: column;
         align-items: center;
     }
-    .prueba{
+    .tarjetas{
         width: 350px;
         height: 350px;
         top: 5vh;
@@ -198,15 +203,26 @@ input{
 @media (max-width: 500px){
     *{
         margin: 0;
+        border: 0;
         padding: 0;
     }
     body{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-image: url(../imágenes/bg-main-mobile.png);
         background-size: 100% 200px;
         background-repeat: repeat-x;
-
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+    .tarjetas{
+        top: 40px;
+        flex-direction: column-reverse;
+        width: 270px;
+        height: 270px;
+        margin: 0;
     }
     .cards{
         position: relative;
@@ -215,16 +231,10 @@ input{
         width: 214px;
         height: 117px;
     }
-
-    .prueba{
-      
-        top: 10px;
-        flex-direction: column-reverse;
-        width: 330px;
-        height: 270px;
-    }
     form{
+       padding: 0;
         top:10px;
+        align-items: center;
     }
     .front{
         position: absolute;
@@ -236,7 +246,7 @@ input{
         left: 15%
     }
     .front h1{ 
-        font-size: 17px;
+        font-size: 15px;
     }
     .front h3,h4{
         font-size: 10px;
@@ -250,12 +260,9 @@ input{
         top: 0;
         left: 50px;
     }
-    .back h3{
-        font-size: 15px;
+    .back .CVCcode{
+        font-size: 12px;
     }
-    
-    
-
     input{
         font-size: 10px;
     }
@@ -277,6 +284,7 @@ input{
         border-radius: 10px;
         width: 300px;
         height: 70px;
+    
     }
     .cvc{
         position: relative;
