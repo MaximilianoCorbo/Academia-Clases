@@ -25,21 +25,28 @@
 
     <form action="post" >
         <label for="CardName">Cardholder Name</label>
-        <input type="text" name="Name" class="LongBox"  id="CardName" placeholder="Francisco Recalde">
+        <input required type="text" name="Name" class="LongBox"  id="CardName" placeholder="Francisco Recalde">
         <label>Card Number</label>
-        <input type="text" name="Number" class="LongBox" id="CardNum"  minlength="16" maxlength="16" placeholder="Francisco's international card number here"> 
+        <input required type="text" name="Number" class="LongBox" id="CardNum"  minlength="16" maxlength="16" placeholder="Francisco's international card number here"> 
         
         <div class="cvc">
             <div class="datos">
                 <label for="">Date (MM/YYYY)</label>
                 <div>
-                    <input type="text" name="Month" id="CardMon" class="Shortbox" minlength="2" maxlength="2" placeholder="MM" >
-                    <input type="text" name="Year" id="CardYear" class="Shortbox" minlength="4" maxlength="4" placeholder="YYYY">
+                    <input required type="text" name="Month" id="CardMon" class="Shortbox" minlength="2" maxlength="2" placeholder="MM" >
+                    <input required type="text" name="Year" id="CardYear" class="Shortbox" minlength="4" maxlength="4" placeholder="YYYY">
                 </div>
             </div>
             <div class="datos">
-                <label > CVC </label>
-                <input type="password" name="CardCVC" id="CardCVC" class="Midbox" required pattern="[0-9]" minlength="3" maxlength="3" placeholder='Keep it secret but show me :)'>
+                <label for="CardCVC"> CVC </label>
+                <input required 
+                type="text" 
+                name="CardCVC" 
+                class="Midbox" 
+                pattern="\d{3}"
+                minlength="3" 
+                maxlength="3" 
+                placeholder='Keep it secret but show me :)'>
             </div>
             
         </div>
@@ -50,5 +57,10 @@
              <h1>¡GRACIAS!</h1>
         </div> -->
     </form>
+
+    <script>
+    
+    </script>
+
 </body>
 </html>

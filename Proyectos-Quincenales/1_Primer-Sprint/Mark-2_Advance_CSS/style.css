@@ -105,8 +105,11 @@ input{
     border-radius: 5px;
     border: 1px solid rgb(34, 8, 59);
     height: 30px;
-    
 }
+input:invalid{
+    border: 2px dashed rgb(255, 94, 0);
+}
+
 .Shortbox{
     width: 70px;
 }
