@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de tareas</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 10px 0;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .especial {
+        background-color: rgb(158, 67, 67);
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <h1>Lista de tareas</h1>
+    <ul id="lista-tareas">
+      <li>
+        Comprar alimentos
+        <span><button onclick="eliminarTarea(this)">X</button></span>
+      </li>
+
+      <li>
+        Pagar facturas
+        <span><button onclick="eliminarTarea(this)">X</button></span>
+      </li>
+
+      <li>
+        Sacar al perro
+        <span><button onclick="eliminarTarea(this)">X</button></span>
+      </li>
+
+      <li>
+        Llamar a Juan
+        <span><button onclick="eliminarTarea(this)">X</button></span>
+      </li>
+    </ul>
+
+    <button onclick="agregarTarea()">Agregar nueva tarea</button>
+
+    <!-- para esta tarea van a usar el classList -->
+    <button onclick="agregarTareaImportante()">Agregar nueva tarea importante</button>
+  </body>
+
+  <script>
+    function agregarTarea() {
+      const nuevaTarea = prompt("Cual es la tarea a agregar?");
+
+      // Creo el nuevo li para la tarea
+      const nuevoItem = document.createElement("li");
+      nuevoItem.innerText = nuevaTarea + " ";
+
+      // creo el span donde pongo el boton
+      const nuevoSpan = document.createElement("span");
+
+      //creo el boton de elimiar
+      const nuevoBotonEliminar = document.createElement("button");
+
+      // seteo propiedades del boton (texto y funcion onclick) no dar corte a la funcion (por ahora)
+      nuevoBotonEliminar.innerText = "X";
+
+      nuevoBotonEliminar.onclick = function () {
+        eliminarTarea(nuevoBotonEliminar);
+      };
+
+      // "inserto" el boton en el span y el span (que ya tiene el bootn) en el li (nuevoItem)
+      nuevoSpan.appendChild(nuevoBotonEliminar);
+      nuevoItem.appendChild(nuevoSpan);
+
+      // Consigo el ul y agrego el nuevo li
+      const ul = document.getElementById("lista-tareas");
+      ul.appendChild(nuevoItem);
+    }
+
+    function agregarTareaImportante() {
+      const nuevaTarea = prompt("Cual es la tarea importante a agregar?");
+
+      // Creo el nuevo li para la tarea
+      const nuevoItem = document.createElement("li");
+      nuevoItem.innerText = nuevaTarea + " ";
+      nuevoItem.classList = "especial";
+
+      // creo el span donde pongo el boton
+      const nuevoSpan = document.createElement("span");
+
+      //creo el boton de elimiar
+      const nuevoBotonEliminar = document.createElement("button");
+
+      // seteo propiedades del boton (texto y funcion onclick) no dar corte a la funcion (por ahora)
+      nuevoBotonEliminar.innerText = "X";
+
+      nuevoBotonEliminar.onclick = function () {
+        eliminarTarea(nuevoBotonEliminar);
+      };
+
+      // "inserto" el boton en el span y el span (que ya tiene el bootn) en el li (nuevoItem)
+      nuevoSpan.appendChild(nuevoBotonEliminar);
+      nuevoItem.appendChild(nuevoSpan);
+
+      // Consigo el ul y agrego el nuevo li
+      const ul = document.getElementById("lista-tareas");
+      ul.appendChild(nuevoItem);
+    }
+
+    function eliminarTarea(botonPresionado) {
+      const spanDelBoton = botonPresionado.parentNode;
+      const liAEliminar = spanDelBoton.parentNode;
+
+      const ul = liAEliminar.parentNode;
+
+      ul.removeChild(liAEliminar);
+    }
+  </script>
+</html>

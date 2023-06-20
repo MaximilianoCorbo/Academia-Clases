@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="Formulario">
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" id="Nombre">
+        <label for="Clave">Clave</label>
+        <input type="text" name="Clave" id="Clave">
+
+
+        <script>
+            //Solicitar que se ingrese el nombre y la clave de un usuario. 
+            //Mostrar una ventana de alerta si en la clave se ingresan.
+            //menos de 7 caracteres o más de 20 (capturar el evento onBlur).
+            const inputs = document.querySelectorAll ("input");
+            console.log(inputs);
+
+            let longitudPass = document.getElementById('Clave');
+            let longitudNom = document.getElementById('Nombre');
+
+            for (let i = 0; i < inputs.length; i++) {
+                const element = inputs[i];
+                
+                //Forma 1
+                    element.onblur = function (){ 
+                        console.log(longitudNom.value.length)
+                        if(longitudNom.value.length < 7 || longitudNom.value.length > 20){
+                            alert(` ERROR: El dato ingresado es menor a 7 caracteres o mayor a 20 en ${this.id}`)
+                        }
+                    };
+                //
+
+                
+                //Forma 2
+                    element.addEventListener("blur", (event) => {
+                        console.log(longitudNom.value.length)
+                        if(longitudNom.value.length < 7 || longitudNom.value.length > 20){
+                            alert(`ERROR: El dato ingresado es menor a 7 caracteres o mayor a 20 en ${event.target.id}`)
+                        }
+                       });
+                //
+            };
+
+            
+        </script>
+    </form>
+</body>
+</html>
