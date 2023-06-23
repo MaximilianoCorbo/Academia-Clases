@@ -11,19 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Genero un contenedor para las tarjetas  -->
     <div class="tarjetas">
+        <!-- Cara frontal de la tarjeta -->
         <div class="cards front">
-            <img src="../imágenes/card-logo.svg" alt="card-logo">
-            <h1 class="number" id="cardNumber">9087 4529 1234 1234</h1>
+            <img src="../imágenes/card-logo.svg" alt="card-logo"> <!--Logo superior izquierdo -->
+            <h1 class="number" id="cardNumber">9087 4529 1234 1234</h1>  
             <h3 class="titular" id="titular">Titular de la tarjeta</h3>
             <h4 class="expiration" id="expiration">Vencimiento</h4>
         </div>
+
+        <!-- Cara trasera de la tarjeta -->
         <div class="cards back">
             <h3 class="CVCcode" id="CVCcode"> CVC Code</h3>
         </div>
     </div>
 
+    <!-- Genero formulario para los datos de la tarjeta -->
     <form action="post" >
+        
+        <!-- Input Nombre #Name .Name -->
         <label for="CardName">Cardholder Name</label>
         <input required 
         type="text" 
@@ -31,7 +38,8 @@
         id="Name"
         class="LongBox" 
         placeholder="Francisco Recalde">
-        
+
+        <!-- Input Numero de tarjeta #CardNum .LongBox-->
         <label>Card Number</label>
         <input required 
         type="text" 
@@ -42,10 +50,13 @@
         maxlength="16" 
         placeholder="Francisco's international card number here"> 
         
+        <!-- Utilizo un div para englobar los inputs Vencimiento y CVC juntos -->
         <div class="cvc">
+            <!-- Utilizo un div para englobar los inputs de Mes y Año juntos -->
             <div class="datos">
-                <label for="">Date (MM/YYYY)</label>
+                <label for="Month">Date (MM/YYYY)</label>
                 <div>
+                    <!-- Input Mes de vencimiento #CardMonth .Shortbox -->
                     <input required 
                     type="text" 
                     name="Month"  
@@ -54,7 +65,7 @@
                     minlength="2" 
                     maxlength="2" 
                     placeholder="MM" >
-
+                    <!-- Input Año de vencimiento #CardYear .Shortbox -->
                     <input required 
                     type="text" 
                     name="Year" 
@@ -65,7 +76,9 @@
                     placeholder="YYYY">
                 </div>
             </div>
+
             <div class="datos">
+                <!-- Input CVC de la tarjeta #CardCVC .Midbox -->
                 <label for="CardCVC"> CVC </label>
                 <input required 
                 type="text" 

@@ -12,6 +12,9 @@ let cardNumer = document.getElementById('cardNumber');
 let expiration = document.getElementById('expiration');
 let CVCcode = document.getElementById('CVCcode');
 
+// FORMA 1
+// Genero una funcion For para que lo que se escriba en los distintos 
+// inputs complete la imagen de la tarjeta
 for (let i = 0; i < inputs.length; i++) {
     const element = inputs[i];
     
@@ -24,7 +27,18 @@ for (let i = 0; i < inputs.length; i++) {
                 titular.innerText =this.value ;
             }else 
             if (this.id == "CardNum") {
-                cardNumer.innerText =this.value ;
+                const grupos = numgrupos(this.value); 
+                cardNumer.innerText = grupos;
+                function numgrupos (num){
+                    const grupo = [];
+                    for (let i = 0; i < num.length; i+=4) {
+                        grupo.push(num.slice(i, i+4));
+                    }
+                    const gruponum= grupo.join (' ');
+                    return gruponum;
+                }  
+               
+                // cardNumer.innerText =this.value ;
             }else 
                 if (this.id == "CardMonth") { 
                     const index = expiration.innerText.indexOf("/")
@@ -45,5 +59,10 @@ for (let i = 0; i < inputs.length; i++) {
             }
             
         };
-    }
-    //
+    };
+    
+    
+// FORMA 2 considerada.
+// usar una funcion por cada input
+
+
