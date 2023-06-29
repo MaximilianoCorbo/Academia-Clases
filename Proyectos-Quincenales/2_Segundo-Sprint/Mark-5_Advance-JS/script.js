@@ -22,14 +22,12 @@ let CVCcode = document.getElementById('CVCcode');
 // inputs complete la imagen de la tarjeta
 for (let i = 0; i < inputs.length; i++) {
      const element = inputs[i];
-    
-
          element.oninput = function (){ 
              console.log("Se ingresaron "+this.value.length +" caracteres");
              console.log(this.id)
 
              if (this.id == "Name"){
-                titular.innerText =this.value ;
+                 titular.innerText =this.value ;
              }else 
              if (this.id == "CardNum") {
                  const grupos = numgrupos(this.value); 
@@ -39,9 +37,10 @@ for (let i = 0; i < inputs.length; i++) {
                      for (let i = 0; i < num.length; i+=4) {
                          grupo.push(num.slice(i, i+4));
                      }
-                     const gruponum= grupo.join (' ');
+                    const gruponum= grupo.join (' ');
                      return gruponum;
                  }  
+                 // cardNumer.innerText =this.value ;
              }else 
                  if (this.id == "CardMonth") { 
                      const index = expiration.innerText.indexOf("/")
@@ -54,7 +53,7 @@ for (let i = 0; i < inputs.length; i++) {
                  }else
                  if (this.id == "CardYear") {
                      const index = expiration.innerText.indexOf("/")
-                    let Month = expiration.innerText.substring(0, index+1)
+                     let Month = expiration.innerText.substring(0, index+1)
                      expiration.innerText = Month + this.value;                
                  }else
              if (this.id == "CardCVC") {
@@ -62,5 +61,66 @@ for (let i = 0; i < inputs.length; i++) {
              }
             
          };
-     };
+ };
    
+
+
+
+// FORMA 2 considerada.
+// usar una funcion por cada input. 
+//Para ello vamos a agregar una etiqueta extra en cada input por función
+
+// function fillName(){
+//     titular.innerText = Name.value ;
+// }
+// function errName(){
+//     for (let i = 0; i < Name.value.length; i++) {
+//         const Vari = Name.value[i];
+        
+//     }
+//     if (Name.value == 0)
+//     {
+//         console.log("error numerico")
+// }
+// }
+
+
+
+
+
+// if (this.id == "CardNum") {
+//     const grupos = numgrupos(this.value); 
+//     cardNumer.innerText = grupos;
+
+//     function numgrupos (num){
+//         const grupo = [];
+//         for (let i = 0; i < num.length; i+=4) {
+//             grupo.push(num.slice(i, i+4));
+//         }
+//         const gruponum= grupo.join (' ');
+//         return gruponum;
+//     }     
+// };
+//     //cardNumer.innerText =this.value ;
+
+
+//     if (this.id == "CardMonth") { 
+//     const index = expiration.innerText.indexOf("/")
+//         if (index == -1){
+//             expiration.innerText = this.value + "/";
+//         }else{
+//             let Year = expiration.innerText.substring(index);
+//                 expiration.innerText = this.value + Year;
+//         }
+//     }
+//     if (this.id == "CardYear") {
+//         const index = expiration.innerText.indexOf("/")
+//             let Month = expiration.innerText.substring(0, index+1)
+//             expiration.innerText = Month + this.value;                
+//         }
+
+
+// if (this.id == "CardCVC") {
+//     CVCcode.innerText =this.value;
+// }
+
