@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <ul>
+        <li>Comprar alimentos</li>
+        <li>Pagar facturas</li>
+        <li>Sacar al perro</li>
+        <li>Llamar a Juan</li>
+    </ul>
+
+    <button>Agregar nueva tarea</button>
+
+    <script>
+        function agregarTarea(){
+            const nuevaTarea = prompt ("Agregar nueva tarea");
+            console.log("nueva tarea: ", nuevaTarea);
+
+            const nuevoItem = document.createElement("li");
+            nuevoItem.innerText = nuevaTarea;
+            console.log("nuevoItem", nuevoItem);
+
+            const ul = document.getElementById("lista-tareas");
+            ul.appendChild(nuevoItem);
+
+
+
+
+        }
+    
+    </script>
+</body>
+</html>
