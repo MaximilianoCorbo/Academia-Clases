@@ -4,7 +4,7 @@ import Cuadrado from './components/cuadrado/Cuadrado'
 function App() {
   return(
     <div className='contenedor'>
-      <Cuadrado colorInicial="red" />
+      <Cuadrado colorInicial="" />
       <Cuadrado colorInicial="blue" />
       <Cuadrado colorInicial="orange" />
       <Cuadrado colorInicial="green" />

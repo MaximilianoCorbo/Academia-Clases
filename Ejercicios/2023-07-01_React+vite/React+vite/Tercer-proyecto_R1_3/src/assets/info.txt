@@ -1,0 +1,4 @@
+Crear un contador: 
+-hacer que se muestre un display inicialmente empezado en 0 
+-que al clickear en un botón que muestre un + se le sume uno al display 
+-un botón que muestre un - y reste al display
